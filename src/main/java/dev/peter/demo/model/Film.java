@@ -15,14 +15,11 @@ public class Film {
 
     @Id
     @GeneratedValue
-    private long id;
+    private long film_id;
     private String title;
 
-    /*
-     * @ManyToMany
-     * 
-     * @JoinTable(name="People_in_films",joinColumns= @JoinColumn(name="person_id"),
-     * inverseJoinColumns= @JoinColumn(name="film__id"));
-     * private List<Person> people;
-     */
+    @ManyToMany
+    @JoinTable(name = "People_in_films", joinColumns = @JoinColumn(name = "person_id"), inverseJoinColumns = @JoinColumn(name = "film__id"))
+    private List<Person> people;
+
 }

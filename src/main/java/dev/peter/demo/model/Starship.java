@@ -7,7 +7,7 @@ public class Starship {
 
     @Id
     @GeneratedValue
-    private long id;
+    private long sharship_id;
     private String name;
 
 }

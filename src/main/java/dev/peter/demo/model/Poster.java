@@ -1,12 +1,10 @@
 package dev.peter.demo.model;
 
-import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,14 +12,18 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-
-public class Planet {
+public class Poster {
 
     @Id
     @GeneratedValue
-    private long planet_id;
-    private String name;
+    private long poster_id;
 
-    @OneToMany(mappedBy = "planet")
-    private List<Person> people;
+    private byte[] content;
+
+    private String contentType;
+
+      @OneToOne
+    @JoinColumn(name = "film_id", unique = true)
+    private Film film;
+    
 }

@@ -19,7 +19,7 @@ public class Planet {
 
     @Id
     @GeneratedValue
-    private long planet_id;
+    private long id;
     private String name;
 
     @OneToMany(mappedBy = "planet")

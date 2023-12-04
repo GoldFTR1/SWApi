@@ -16,7 +16,7 @@ public class Poster {
 
     @Id
     @GeneratedValue
-    private long poster_id;
+    private long id;
 
     private byte[] content;
 

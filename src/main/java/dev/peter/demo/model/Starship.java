@@ -21,7 +21,7 @@ public class Starship {
 
     @Id
     @GeneratedValue
-    private long sharship_id;
+    private long id;
     private String name;
 
     @CreationTimestamp

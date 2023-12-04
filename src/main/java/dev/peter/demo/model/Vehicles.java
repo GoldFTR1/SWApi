@@ -14,7 +14,7 @@ public class Vehicles {
 
     @Id
     @GeneratedValue
-    private Long vehicle_id;
+    private Long id;
 
     private String vehicle_class;
     

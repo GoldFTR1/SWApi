@@ -9,15 +9,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.peter.demo.model.Person;
+import dev.peter.demo.repositories.PersonPagingRepository;
 import dev.peter.demo.repositories.PersonRepository;
 
 
 @RestController
 public class PersonController {
 
+    
 
     @Autowired
     private PersonRepository personRepository;
+
+    @Autowired
+    private PersonPagingRepository personPagingRepository;
 
     @GetMapping(value="/person")
     private List<Person> getAllPerson(){

@@ -1,4 +1,4 @@
-package dev.peter.demo.validation;
+package dev.peter.demo.service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,10 +10,10 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
+
 @Service
 public class ObjectValidator {
-
-    private final ValidatorFactory vf = Validation.buildDefaultValidatorFactory();
+       private final ValidatorFactory vf = Validation.buildDefaultValidatorFactory();
 
     private final Validator validation = vf.getValidator();
 
@@ -34,4 +34,5 @@ public class ObjectValidator {
         }
 
     }
+    
 }

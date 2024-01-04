@@ -5,17 +5,15 @@ import java.util.List;
 import dev.peter.demo.constants.Gender;
 import dev.peter.demo.model.Film;
 import dev.peter.demo.model.Planet;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 public class CreatePersonRequest {
 
+    @NotBlank
     private String firstName;
+    @NotBlank
 
     private String lastName;
     private String gender;
@@ -23,5 +21,5 @@ public class CreatePersonRequest {
     private Planet planet;
 
    
-    private List<Film> films;
+    private List<Long> films;
 }

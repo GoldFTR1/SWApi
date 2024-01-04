@@ -11,7 +11,10 @@ import dev.peter.demo.model.Person;
 @Repository
 public interface PersonPagingRepository extends ListPagingAndSortingRepository<Person, Long> {
 
-    List<Person> findAllBy(Pageable pageable);
+    static List<Person> findAllBy(Pageable pageable) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findAllBy'");
+    }
 
     
 } 
